@@ -14,8 +14,17 @@ main{position:relative;z-index:10;width:100%;max-width:520px;display:flex;flex-d
 @keyframes popIn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
 .glow-ring{position:absolute;inset:-14px;border-radius:50%;background:linear-gradient(135deg,#f9a8d4,#c4b5fd,#93c5fd);filter:blur(18px);opacity:.5;animation:glow 2.5s ease-in-out infinite}
 @keyframes glow{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.75;transform:scale(1.08)}}
-.photo-circle{position:relative;width:100%;height:100%;border-radius:50%;background:linear-gradient(135deg,#fce7f3,#ede9fe,#dbeafe);border:4px solid #fff;box-shadow:0 12px 40px rgba(244,114,182,.25);display:flex;flex-direction:column;align-items:center;justify-content:center}
-.photo-emoji{font-size:4rem}
+.photo-circle {
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-circle video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .photo-sparkle{font-size:1.6rem;margin-top:.3rem}
 h1{font-size:clamp(1.8rem,6vw,2.6rem);font-weight:800;background:linear-gradient(135deg,#f472b6,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:fadeUp .7s ease both;animation-delay:.3s}
 .subtitle{color:#6b7280;font-size:1rem;animation:fadeUp .7s ease both;animation-delay:.45s}
