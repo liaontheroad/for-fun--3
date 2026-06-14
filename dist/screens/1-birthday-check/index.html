@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Before you enter...</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="balloons" aria-hidden="true">
+    <span class="balloon" style="--x:6%;--delay:0s">🎈</span>
+    <span class="balloon" style="--x:82%;--delay:2s">🎈</span>
+    <span class="balloon" style="--x:45%;--delay:4s">🎈</span>
+  </div>
+  <div class="confetti-wrap" id="confettiWrap" aria-hidden="true"></div>
+  <div class="sparkles" aria-hidden="true">
+    <span class="sparkle" style="top:8%;left:6%;--d:0s">✦</span>
+    <span class="sparkle" style="top:10%;right:8%;--d:0.8s">✦</span>
+    <span class="sparkle" style="bottom:14%;left:10%;--d:1.4s">✦</span>
+    <span class="sparkle" style="bottom:10%;right:6%;--d:0.4s">✦</span>
+  </div>
+  <main>
+    <div class="card" id="card">
+      <div class="cake">🎂</div>
+      <h1>Before you enter...</h1>
+      <p class="subtitle">Masukin tanggal lahirmu dulu ya 🎂</p>
+      <div class="inputs">
+        <input type="number" id="dayInput" placeholder="Tanggal" min="1" max="31"/>
+        <select id="monthSelect">
+          <option value="">Bulan</option>
+          <option value="1">Januari</option><option value="2">Februari</option>
+          <option value="3">Maret</option><option value="4">April</option>
+          <option value="5">Mei</option><option value="6">Juni</option>
+          <option value="7">Juli</option><option value="8">Agustus</option>
+          <option value="9">September</option><option value="10">Oktober</option>
+          <option value="11">November</option><option value="12">Desember</option>
+        </select>
+      </div>
+      <p class="hint">Hint: tanggal spesial di bulan Juni ✨</p>
+      <div id="errorBox" class="msg-box error hidden">
+        <p class="msg-title">Yah, tanggalnya belum benar 😢</p>
+        <p class="msg-sub">Coba lagi yaa, cuma orang spesial yang bisa buka ini 💌</p>
+      </div>
+      <div id="successBox" class="msg-box success hidden">
+        <p class="msg-title">Yeay, benar! 🎉</p>
+        <p class="msg-sub">Selamat datang, orang spesial ✨</p>
+      </div>
+      <button id="submitBtn" class="btn-primary">🎁 Open the gift</button>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
